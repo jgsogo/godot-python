@@ -1,6 +1,6 @@
 
 cmake_minimum_required(VERSION 3.0)
-project(godot-python)
+project(godot-python CXX)
 
 add_executable(executable main.cpp)
 target_link_libraries(executable PRIVATE pybind11::pybind11 Python::Python mancala)

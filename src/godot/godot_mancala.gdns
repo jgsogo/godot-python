@@ -1,0 +1,10 @@
+[gd_resource type="NativeScript" load_steps=2 format=2]
+
+[ext_resource path="res://package/bin/godot_mancala.gdnlib" type="GDNativeLibrary" id=1]
+
+[resource]
+
+resource_name = "godot_mancala"
+class_name = "Mancala"
+library = ExtResource( 1 )
+_sections_unfolded = [ "Resource" ]

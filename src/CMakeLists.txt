@@ -1,6 +1,6 @@
 
 cmake_minimum_required(VERSION 3.0)
-project(godot-python)
+project(godot-python CXX)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -19,6 +19,7 @@ install(DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/py_mancala/
         DESTINATION ${CMAKE_INSTALL_PREFIX}/bin/py_mancala
         FILES_MATCHING PATTERN "*.py")
 
+add_subdirectory(godot)
 add_subdirectory(executable)
 
 
