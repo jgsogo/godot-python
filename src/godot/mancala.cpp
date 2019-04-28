@@ -1,6 +1,6 @@
 
 #include "mancala.h"
-#include "../mancala.h"
+#include "../lib/mancala.h"
 #include <pybind11/embed.h>
 
 namespace godot {

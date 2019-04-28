@@ -1,7 +1,7 @@
 
 #include <iostream>
 #include <pybind11/embed.h>
-#include "../mancala.h"
+#include "../lib/mancala.h"
 
 namespace py = pybind11;
 
