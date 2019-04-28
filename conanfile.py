@@ -9,6 +9,7 @@ class GodotPython(ConanFile):
 
     def requirements(self):
         self.requires("pybind11/2.2.4@conan/stable")
+        self.requires("godot-cpp/[~0.0.0-0,include_prerelease=True]@jgsogo/stable")
 
     def build(self):
         cmake = CMake(self)
