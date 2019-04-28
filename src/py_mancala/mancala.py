@@ -12,7 +12,3 @@ class Mancala:
     def play_position(self, value):
         print("(python) Mancala::play_position(value={!r})".format(value))
         self.state = value
-
-
-# Create a single object to keep state
-mancala = Mancala()

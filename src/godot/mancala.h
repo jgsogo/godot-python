@@ -8,8 +8,8 @@
 
 namespace godot {
 
-    class Mancala : public Reference {
-        GODOT_SUBCLASS(Mancala, Reference);
+    class Mancala : public GodotScript<Reference> {
+        GODOT_CLASS(Mancala);
     public:
         Mancala();
         ~Mancala();

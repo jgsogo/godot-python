@@ -14,6 +14,9 @@ int main() {
     py::object path_insert = sys_path.attr("insert");
     path_insert(0, "/Users/jgsogo/dev/projects/codeattack/godot-python/build/package/bin");
 
+    std::string data = sys_path.attr("__str__")().cast<std::string>();
+    std::cout << data << std::endl;
+
     python::Mancala mancala;
     auto pos = mancala.get_state();
     std::cout << "(c++) pos: " << pos << "\n";

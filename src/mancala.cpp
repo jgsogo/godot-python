@@ -12,16 +12,15 @@ namespace python {
     };
 
     Mancala::Mancala() : pImpl(std::make_unique<Impl>()) {
-        py::object mancala_class = py::module::import("py_mancala").attr("Mancala");
-        pImpl->mancala = mancala_class();
+        // State is stored inside the python module
+        pImpl->mancala = py::module::import("py_mancala").attr("mancala");
         pImpl->get_state = pImpl->mancala.attr("get_state");
         pImpl->play_position = pImpl->mancala.attr("play_position");
     };
     Mancala::~Mancala() {};
 
     std::string Mancala::get_state() const {
-        auto state = pImpl->get_state();
-        return state.cast<std::string>();
+        return pImpl->get_state().cast<std::string>();
     }
 
     void Mancala::play_position(const std::string& position) {
