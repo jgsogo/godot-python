@@ -1,4 +1,0 @@
-[submodule "gdnative_cpp_example/godot-cpp"]
-	path = gdnative_cpp_example/godot-cpp
-	url = https://github.com/GodotNativeTools/godot-cpp
-	branch = 3.0
