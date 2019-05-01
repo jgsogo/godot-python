@@ -7,8 +7,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(pybind11 REQUIRED)
 
-set(Python_USE_STATIC_LIBS TRUE)
-find_package(Python COMPONENTS Development)  # TODO: need Conan recipe
+# set(Python_USE_STATIC_LIBS TRUE)
+# find_package(Python COMPONENTS Development)  # TODO: need Conan recipe
+find_package(cpython REQUIRED)
 
 add_subdirectory(lib)
 add_subdirectory(godot)

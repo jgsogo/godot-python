@@ -9,10 +9,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(godot-cpp REQUIRED)
 
 add_library(godot_mancala SHARED mancala.h mancala.cpp)
-target_link_libraries(godot_mancala PRIVATE godot-cpp::godot-cpp pybind11::pybind11 mancala)
+target_link_libraries(godot_mancala PRIVATE godot-cpp::godot-cpp pybind11::pybind11 cpython::cpython mancala)
 set_property(TARGET godot_mancala PROPERTY POSITION_INDEPENDENT_CODE ON)
-target_link_libraries(godot_mancala PRIVATE pybind11::pybind11 ${Python_LIBRARIES})
-target_include_directories(godot_mancala PRIVATE ${Python_INCLUDE_DIRS})
+# target_include_directories(godot_mancala PRIVATE ${Python_INCLUDE_DIRS})
 
 install(TARGETS godot_mancala 
         LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
